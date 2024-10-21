@@ -1,14 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { assets } from '../assets/assets';
-
-// Duplicate the single testimonial 8 times
-const testimonials = Array(8).fill({
-  name: 'Carl Rowan',
-  company: 'Aglets Inc',
-  feedback:
-    'Psychiatry took a lot of the anxiety and stress out of the equation. I was able to easily sort the directory, and the provider profiles were so helpful in giving me a sense of their energy and approach.',
-  avatar: assets.carl_avatar
-});
+import { mockData } from '../data/mockData';
 
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -20,7 +11,7 @@ const TestimonialsSection = () => {
     const cardWidth = carouselRef.current.firstChild.offsetWidth;
 
     // Calculate the index based on how much of the card is in view
-    for (let i = 0; i < testimonials.length; i++) {
+    for (let i = 0; i < mockData.testimonials.length; i++) {
       const cardLeftEdge = i * cardWidth;
       const cardRightEdge = (i + 1) * cardWidth;
 
@@ -45,7 +36,7 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <section className="py-16">
+    <section className="pt-12 pb-16 md:pt-16 md:pb-20">
       <div className="container mx-auto">
         <h2 className="mb-10 text-2xl font-bold text-center xs:text-3xl font-playfair">
           What Our Patients Are Saying
@@ -57,15 +48,15 @@ const TestimonialsSection = () => {
             className="flex overflow-x-auto transition-transform duration-500 ease-out scroll-smooth snap-x snap-mandatory scrollbar-hide"
           >
             {/* Testimonial Cards */}
-            {testimonials.map((testimonial, index) => (
+            {mockData.testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 snap-start w-[95%] sm:w-[578px] mx-4"
+                className="flex-shrink-0 snap-start w-[96%] sm:w-[578px] mx-4"
               >
                 <div className="w-full">
                   <div className="pt-4 pl-6 pr-6 rounded-t-xl bg-gold">
                     <span className="text-black text-9xl font-playfair">“</span>
-                    <blockquote className="p-2 -mt-12 text-lg md:text-xl text-black-600 font-georgia">
+                    <blockquote className="p-2 pb-6 -mt-12 text-lg md:p-4 md:pb-8 md:text-xl text-black-600 font-georgia">
                       “{testimonial.feedback}”
                     </blockquote>
                   </div>
@@ -74,13 +65,13 @@ const TestimonialsSection = () => {
                       <img
                         src={testimonial.avatar}
                         alt={testimonial.name}
-                        className="w-16 h-16 rounded-full"
+                        className="w-12 h-12 rounded-full sm:w-16 sm:h-16"
                       />
-                      <div className="ml-3">
-                        <h1 className="mt-1 text-lg font-normal text-white">
+                      <div className="ml-2 sm:ml-3">
+                        <h1 className="text-base font-normal text-white sm:mt-1 sm:text-lg">
                           {testimonial.name}
                         </h1>
-                        <p className="text-white font-playfair">{testimonial.company}</p>
+                        <p className="text-sm text-white sm:text-base font-playfair">{testimonial.company}</p>
                       </div>
                     </div>
                   </div>
@@ -91,7 +82,7 @@ const TestimonialsSection = () => {
 
           {/* Dots Indicator */}
           <div className="flex justify-center mt-8">
-            {testimonials.map((_, index) => (
+            {mockData.testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() =>
