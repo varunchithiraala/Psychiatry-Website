@@ -18,7 +18,7 @@ module.exports = {
         'li-gold': '#ffd700'
       },
       backgroundImage: theme => ({
-        'custom-gradient': 'linear-gradient(to right, #ccad00, #e6c300, #ffec80 , #e6c300 , #ccad00)',
+        'custom-gradient': 'linear-gradient(to right, #b39800, #e6c300, #ffe866, #e6c300, #b39800)'
       })
     },
   },
