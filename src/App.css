@@ -1,0 +1,79 @@
+/* Base style for mobile view */
+.hexagon {
+  width: 10px; /* Decreased size for mobile */
+  height: 5.8px; /* Decreased size for mobile */
+  background-color: #404040;
+  position: relative;
+  margin: 3.5px 0; /* Adjusted margin for mobile */
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 5px solid transparent; /* Adjusted for mobile */
+  border-right: 5px solid transparent; /* Adjusted for mobile */
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 2.9px solid #404040; /* Adjusted for mobile */
+}
+
+.hexagon:after {
+  top: 100%;
+  border-top: 2.9px solid #404040; /* Adjusted for mobile */
+}
+
+.hexagon.active {
+  background-color: #FFD700;
+}
+
+.hexagon.active:before {
+  border-bottom-color: #FFD700;
+}
+
+.hexagon.active:after {
+  border-top-color: #FFD700;
+}
+
+/* Desktop view adjustments */
+@media (min-width: 640px) {
+  .hexagon {
+    width: 16px;
+    height: 9.27px;
+    margin: 5.77px 0;
+  }
+
+  .hexagon:before,
+  .hexagon:after {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+  }
+
+  .hexagon:before {
+    border-bottom: 4.62px solid #404040;
+  }
+
+  .hexagon:after {
+    border-top: 4.62px solid #404040;
+  }
+
+  .hexagon.active:before {
+    border-bottom-color: #FFD700;
+  }
+
+  .hexagon.active:after {
+    border-top-color: #FFD700;
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
