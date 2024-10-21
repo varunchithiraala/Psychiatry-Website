@@ -5,7 +5,7 @@ import { mockData } from '../data/mockData';
 const TreatmentSection = () => (
     <section className="py-8 md:py-16">
       <div className="container mx-auto w-[85%] md:w-[80%] lg:w-[75%] max-w-[800px]">
-        <h2 className="mb-8 text-2xl font-bold text-center md:mb-16 xs:text-3xl font-playfair">Our Treatment Focus</h2>
+        <h2 className="mb-8 text-2xl font-bold text-center md:mb-16 xs:text-3xl md:text-4xl font-playfair">Our Treatment Focus</h2>
         <div className="grid gap-8 md:grid-cols-1">
           {mockData.treatmentFocusData.map((item, index) => (
             <div
