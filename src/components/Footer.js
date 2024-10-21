@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="relative">
       <div className="bg-black">
-      <div className="container grid grid-cols-1 gap-8 p-8 mx-auto text-white xs:grid-cols-2 lg:grid-cols-2 md:p-10 md:px-12 lg:px-16">
+      <div className="container grid grid-cols-1 gap-8 p-8 mx-auto text-white xs:grid-cols-2 lg:grid-cols-2 md:p-10 md:py-12">
         {/* Left side container */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div>
@@ -55,13 +55,13 @@ const Footer = () => {
               <div className="w-8 h-8 rounded-tl-full rounded-tr-full rounded-bl-none rounded-br-full bg-custom-gradient"></div>
               <h1 className="ml-2 text-sm font-semibold xs:text-base sm:text-lg xl:text-xl">P S Y C H I A T R Y</h1>
             </div>
-            <h4 className="mt-4 mb-2 text-lg font-bold md:mb-5 md:text-xl text-thick-gold font-playfair">Locate us</h4>
+            <h4 className="mt-6 mb-2 text-lg font-bold md:mb-5 md:text-xl text-thick-gold font-playfair">Locate us</h4>
             <ul>
               <li className="mb-2 text-sm text-slate-200">1820 E Ray Road A107, Chandler, Arizona 85225</li>
               <li className="mb-2 text-sm text-slate-200">Phone: 480-526-9292</li>
             </ul>
             <h4 className="mt-6 mb-3 text-lg font-bold md:mb-5 md:text-xl text-thick-gold font-playfair">Follow us</h4>
-            <div className="flex gap-6">
+            <div className="flex gap-4 md:gap-6">
               <img src={assets.instagram_icon} className="w-5 h-5 md:w-6 md:h-6" alt="instagram" />
               <img src={assets.facebook_icon} className="w-5 h-5 md:w-6 md:h-6" alt="facebook" />
               <img src={assets.twitter_icon} className="w-5 h-5 md:w-6 md:h-6" alt="twitter" />
@@ -72,7 +72,7 @@ const Footer = () => {
         </div>
       </div>
       <hr className="my-4 border-gray-500" />
-      <p className="pb-4 text-base text-center lg:pb-5 text-slate-200">
+      <p className="pb-4 text-sm text-center sm:text-base lg:pb-5 text-slate-200">
         &copy; Psychiatry. All rights reserved.
       </p>
       </div>
