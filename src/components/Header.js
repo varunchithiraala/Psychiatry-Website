@@ -39,16 +39,16 @@ const Header = () => {
       <nav className="hidden xl:mr-2 lg:flex">
         <ul className="flex items-center lg:space-x-3 xl:space-x-6">
           <li className="flex gap-2">
-            <p>Who we are</p>
+            <p className="text-white">Who we are</p>
             <img className="h-5 mt-1" src={assets.down_arrow_icon} alt="down_arrow" />
           </li>
           <li className="flex gap-2">
-            <p>Who we treat</p>
+            <p className="text-white">Who we treat</p>
             <img className="h-5 mt-1" src={assets.down_arrow_icon} alt="down_arrow" />
           </li>
-          <li>Services</li>
+          <li className="text-white">Services</li>
           <li className="flex gap-2">
-            <p>Resources</p>
+            <p className="text-white">Resources</p>
             <img className="h-5 mt-1" src={assets.down_arrow_icon} alt="down_arrow" />
           </li>
           <li>
@@ -77,10 +77,10 @@ const Header = () => {
         </div>
         <nav className="px-6 py-4">
           <ul className="space-y-6 text-white">
-            <li className="text-base sm:text-lg">Who we are</li>
-            <li className="text-base sm:text-lg">Who we treat</li>
-            <li className="text-base sm:text-lg">Services</li>
-            <li className="text-base sm:text-lg">Resources</li>
+            <li className="text-sm text-white xs:text-base sm:text-lg">Who we are</li>
+            <li className="text-sm text-white xs:text-base sm:text-lg">Who we treat</li>
+            <li className="text-sm text-white xs:text-base sm:text-lg">Services</li>
+            <li className="text-sm text-white xs:text-base sm:text-lg">Resources</li>
           </ul>
         </nav>
       </div>
