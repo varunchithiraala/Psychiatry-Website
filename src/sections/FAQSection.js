@@ -1,27 +1,9 @@
 import React, { useState } from 'react';
 import { assets } from '../assets/assets';
-
-const questions = [
-    {
-      question: "Is Psychiatry confidential?",
-      answer: "We Offer In-Person And Virtual Psychiatry Services Where You Can Meet Your Provider In Person Or At The Convenience Of Your Own Home.",
-    },
-    {
-      question: "What is the best way to schedule an appointment?",
-      answer: "You Can Schedule An Appointment Through Our Website Or Call Us Directly For A More Personalized Experience.",
-    },
-    {
-      question: "Do you prescribe controlled substance medication?",
-      answer: "Yes, Our Certified Professionals Can Prescribe Medications Based On Individual Needs.",
-    },
-    {
-      question: "How long does the initial appointment take?",
-      answer: "Typically, The Initial Appointment Takes 45-60 Minutes.",
-    },
-];
+import { mockData } from '../data/mockData';
 
 const FAQSection = () => {
-  const [open, setOpen] = useState(questions.map(() => false));
+  const [open, setOpen] = useState(mockData.questions.map(() => false));
 
   const toggle = (i) => {
     const newOpen = [...open];
@@ -32,12 +14,12 @@ const FAQSection = () => {
   return (
     <section className="py-16">
       <div className="container w-[90%] mx-auto">
-        <h2 className="mb-10 text-3xl font-medium text-center lg:text-4xl font-georgia">Frequently asked questions</h2>
+        <h2 className="mb-4 text-3xl font-medium text-center xs:mb-6 md:mb-10 lg:text-4xl font-georgia">Frequently asked questions</h2>
         <div className="max-w-4xl mx-auto">
-          {questions.map((item, i) => (
+          {mockData.questions.map((item, i) => (
             <div
               key={i}
-              className={`py-4 ${i !== questions.length - 1 ? 'border-b-[1px] border-li-gold' : ''}`}
+              className={`py-2 xs:py-3 md:py-4 ${i !== mockData.questions.length - 1 ? 'border-b-[1px] border-li-gold' : ''}`}
             >
               <button
                 onClick={() => toggle(i)}
