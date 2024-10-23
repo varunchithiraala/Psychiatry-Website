@@ -30,8 +30,11 @@ The Psychiatry Website is a professionally developed, responsive web application
 
 ### Prerequisites
 
-- Node.js (v14 or later)
-- npm (v6 or later) or yarn
+Before you begin, ensure you have met the following requirements:
+
+- **Node.js** (v20.11.1 or later)
+- **npm** (v10.9.0 or later) or **yarn**
+- **Git** (version 2.44.0.windows.1) installed on your local machine
 
 ### Installation
 
